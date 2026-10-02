@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collaj — Open-source software / Logiciels libres</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6e6e73;
+    --accent: #b8860b;
+    --rule: #e5e5ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0a;
+      --fg: #f2f2f7;
+      --muted: #98989d;
+      --accent: #ffcc00;
+      --rule: #2c2c2e;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 2rem 1.25rem 4rem;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.9rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.35rem; margin: 2.5rem 0 0.75rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 0.35rem; }
+  p, li { margin-bottom: 0.75rem; color: var(--fg); }
+  ul { padding-left: 1.4rem; margin-bottom: 0.75rem; }
+  .meta { color: var(--muted); margin-bottom: 1.5rem; }
+  .lang-switch { margin: 1rem 0 2rem; }
+  .lang-switch a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+  a { color: var(--accent); }
+  .contact {
+    background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Collaj — Photo &amp; Video Collage</h1>
+<p class="meta">Open-source software / Logiciels libres</p>
+<nav class="lang-switch">
+  <a href="#english">🇬🇧 English</a>
+  <a href="#francais">🇫🇷 Français</a>
+</nav>
+
+<!-- ============================= ENGLISH ============================= -->
+<section id="english">
+<h2>Open-source software (English)</h2>
+<p class="meta">Last updated: October 3, 2026</p>
+
+<p>This software uses code of <a href="https://ffmpeg.org">FFmpeg</a> licensed under the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPLv2.1</a> and its source can be downloaded <a href="#download-en">here</a>.</p>
+
+<p>Collaj’s video export uses <a href="https://ffmpeg.org">FFmpeg</a>, which does not belong to Collaj. This page gives the complete source code of the FFmpeg build shipped in the app, as its licence requires. The licences of every component, and of the fonts, are also listed in the app: <em>Settings › About › Licenses</em>.</p>
+
+<h3>What the app contains</h3>
+<p>Collaj ships FFmpeg 8.1.2 as seven dynamic frameworks, loaded at run time and replaceable: <code>libavutil</code>, <code>libswresample</code>, <code>libswscale</code>, <code>libavcodec</code>, <code>libavformat</code>, <code>libavfilter</code> (FFmpeg, <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU LGPL 2.1 or later</a>) and <code>fftools</code> (FFmpeg’s command-line tool as a library, <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU LGPL 3.0 or later</a>). FFmpeg was configured without <code>--enable-gpl</code> and without <code>--enable-nonfree</code>. Built in: zimg 3.0.6 (WTFPL), OpenH264 2.6.0 (BSD-2-Clause), dav1d 1.5.4 (BSD-2-Clause).</p>
+
+<h3 id="download-en">Download the source code</h3>
+<div class="contact">
+  <p><a href="sources/collaj-ffmpeg-8.1.2-sources.tar.gz"><strong>collaj-ffmpeg-8.1.2-sources.tar.gz</strong></a> (75.5 MB)<br>
+  SHA-256 <code style="word-break:break-all">fb1906ac33feaeee4dff8cfaee1d073520cee4ca18523e3aad34fc4c9a4e4a54</code></p>
+  <p>It contains the upstream release archives byte for byte (FFmpeg, zimg, OpenH264, dav1d, and the FFmpegKitNext <code>fftools</code> adaptation), no patch, the exact configure line of each architecture, the toolchain versions, the build script that produced the frameworks from them on macOS with Xcode, and the licence texts. Its <code>SOURCES.md</code> explains how to rebuild the libraries and replace them in the app.</p>
+</div>
+
+<h3>Earlier versions</h3>
+<p>Collaj 1.0 to 1.1.1 used a prebuilt FFmpeg 6.0 from the <a href="https://pub.dev/packages/ffmpeg_kit_flutter_new_gpl">ffmpeg_kit_flutter_new_gpl</a> package, built with <code>--enable-gpl</code> by its publisher from the FFmpegKit 6.0 build scripts. Its sources are those of <a href="https://git.ffmpeg.org/ffmpeg.git">FFmpeg n6.0</a> and of the libraries listed on <a href="https://github.com/arthenica/ffmpeg-kit/wiki/Source">FFmpegKit’s source page</a>. Collaj 1.1.2 and later use the build above, under the LGPL only.</p>
+
+<h3>Availability</h3>
+<p>Each source bundle stays on this page for at least three years after the last distribution of the app version that contains it. Questions: <a href="mailto:collaj.app@proton.me">collaj.app@proton.me</a> (Arnaud Desné EI).</p>
+</section>
+
+<!-- ============================= FRANÇAIS ============================= -->
+<section id="francais">
+<h2>Logiciels libres (Français)</h2>
+<p class="meta">Dernière mise à jour : 3 octobre 2026</p>
+
+<p>Ce logiciel utilise du code de <a href="https://ffmpeg.org">FFmpeg</a> sous licence <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPLv2.1</a>, dont la source peut être téléchargée <a href="#download-fr">ici</a>.</p>
+
+<p>L’export vidéo de Collaj utilise <a href="https://ffmpeg.org">FFmpeg</a>, qui n’appartient pas à Collaj. Cette page donne le code source complet de la version de FFmpeg livrée dans l’app, comme sa licence l’exige. Les licences de chaque composant, et des polices, sont aussi listées dans l’app : <em>Réglages › À propos › Licences</em>.</p>
+
+<h3>Ce que contient l’app</h3>
+<p>Collaj livre FFmpeg 8.1.2 sous forme de sept frameworks dynamiques, chargés au lancement et remplaçables : <code>libavutil</code>, <code>libswresample</code>, <code>libswscale</code>, <code>libavcodec</code>, <code>libavformat</code>, <code>libavfilter</code> (FFmpeg, <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU LGPL 2.1 ou ultérieure</a>) et <code>fftools</code> (l’outil en ligne de commande de FFmpeg sous forme de bibliothèque, <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU LGPL 3.0 ou ultérieure</a>). FFmpeg a été configuré sans <code>--enable-gpl</code> ni <code>--enable-nonfree</code>. Compilés dedans : zimg 3.0.6 (WTFPL), OpenH264 2.6.0 (BSD-2-Clause), dav1d 1.5.4 (BSD-2-Clause).</p>
+
+<h3 id="download-fr">Télécharger le code source</h3>
+<div class="contact">
+  <p><a href="sources/collaj-ffmpeg-8.1.2-sources.tar.gz"><strong>collaj-ffmpeg-8.1.2-sources.tar.gz</strong></a> (75.5 MB)<br>
+  SHA-256 <code style="word-break:break-all">fb1906ac33feaeee4dff8cfaee1d073520cee4ca18523e3aad34fc4c9a4e4a54</code></p>
+  <p>Il contient les archives officielles à l’octet près (FFmpeg, zimg, OpenH264, dav1d, et l’adaptation <code>fftools</code> de FFmpegKitNext), sans aucun correctif, la ligne de configuration exacte de chaque architecture, les versions des outils, le script qui en a produit les frameworks sur macOS avec Xcode, et les textes des licences. Son <code>SOURCES.md</code> explique comment recompiler les bibliothèques et les remplacer dans l’app.</p>
+</div>
+
+<h3>Versions précédentes</h3>
+<p>Collaj 1.0 à 1.1.1 utilisaient un FFmpeg 6.0 précompilé, issu du paquet <a href="https://pub.dev/packages/ffmpeg_kit_flutter_new_gpl">ffmpeg_kit_flutter_new_gpl</a>, compilé avec <code>--enable-gpl</code> par son éditeur à partir des scripts de FFmpegKit 6.0. Ses sources sont celles de <a href="https://git.ffmpeg.org/ffmpeg.git">FFmpeg n6.0</a> et des bibliothèques listées sur la <a href="https://github.com/arthenica/ffmpeg-kit/wiki/Source">page des sources de FFmpegKit</a>. À partir de Collaj 1.1.2, l’app utilise la version ci-dessus, sous LGPL uniquement.</p>
+
+<h3>Disponibilité</h3>
+<p>Chaque paquet de sources reste sur cette page au moins trois ans après la dernière distribution de la version de l’app qui le contient. Questions : <a href="mailto:collaj.app@proton.me">collaj.app@proton.me</a> (Arnaud Desné EI).</p>
+</section>
+
+</main>
+</body>
+</html>
