@@ -67,7 +67,7 @@
 <!-- ============================= ENGLISH ============================= -->
 <section id="english">
 <h2>Open-source software (English)</h2>
-<p class="meta">Last updated: November 14, 2026</p>
+<p class="meta">Last updated: November 15, 2026</p>
 
 <p>This software uses code of <a href="https://ffmpeg.org">FFmpeg</a> licensed under the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPLv2.1</a> and its source can be downloaded <a href="#download-en">here</a>.</p>
 
@@ -79,8 +79,8 @@
 <h3 id="download-en">Download the source code</h3>
 <div class="contact">
   <p><a href="sources/collaj-ffmpeg-8.1.3-sources.tar.gz"><strong>collaj-ffmpeg-8.1.3-sources.tar.gz</strong></a> (75.5 MB)<br>
-  SHA-256 <code style="word-break:break-all">abe5777db7625792eff4a6c2178dc792d0896a8f05df2970437af8b6422945ba</code></p>
-  <p>It contains the upstream release archives byte for byte (FFmpeg, zimg, OpenH264, dav1d, and the FFmpegKitNext <code>fftools</code> adaptation), Collaj’s only change to FFmpeg (a <code>format</code> option for the <code>scale_vt</code> filter, in <code>changes.diff</code> and <code>scripts/patches/</code>, applied before building), the exact configure line of each architecture, the toolchain versions, the build script that produced the frameworks from them on macOS with Xcode, and the licence texts. Its <code>SOURCES.md</code> explains how to rebuild the libraries and replace them in the app.</p>
+  SHA-256 <code style="word-break:break-all">c73ab7251d843b2b53e7c5edd2c1a0960c15da69e81762180616db3b2e5eb1de</code></p>
+  <p>It contains the upstream release archives byte for byte (FFmpeg, zimg, OpenH264, dav1d, and the FFmpegKitNext <code>fftools</code> adaptation), Collaj’s changes to FFmpeg (five patches, in <code>changes.diff</code> and <code>scripts/patches/</code>, applied before building: a <code>format</code> option for the <code>scale_vt</code> filter; ARM NEON versions of the <code>overlay</code> filter’s blending, for 8-bit and 10-bit pictures and over a picture that has alpha, with a fix for a data race between that filter’s threads; and a direct colour table in the <code>paletteuse</code> filter), the exact configure line of each architecture, the toolchain versions, the build script that produced the frameworks from them on macOS with Xcode, and the licence texts. Its <code>SOURCES.md</code> explains how to rebuild the libraries and replace them in the app.</p>
 </div>
 
 <h3>Earlier versions</h3>
@@ -99,7 +99,7 @@
 <!-- ============================= FRANÇAIS ============================= -->
 <section id="francais">
 <h2>Logiciels libres (Français)</h2>
-<p class="meta">Dernière mise à jour : 14 novembre 2026</p>
+<p class="meta">Dernière mise à jour : 15 novembre 2026</p>
 
 <p>Ce logiciel utilise du code de <a href="https://ffmpeg.org">FFmpeg</a> sous licence <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPLv2.1</a>, dont la source peut être téléchargée <a href="#download-fr">ici</a>.</p>
 
@@ -111,8 +111,8 @@
 <h3 id="download-fr">Télécharger le code source</h3>
 <div class="contact">
   <p><a href="sources/collaj-ffmpeg-8.1.3-sources.tar.gz"><strong>collaj-ffmpeg-8.1.3-sources.tar.gz</strong></a> (75.5 MB)<br>
-  SHA-256 <code style="word-break:break-all">abe5777db7625792eff4a6c2178dc792d0896a8f05df2970437af8b6422945ba</code></p>
-  <p>Il contient les archives officielles à l’octet près (FFmpeg, zimg, OpenH264, dav1d, et l’adaptation <code>fftools</code> de FFmpegKitNext), l’unique modification de Collaj à FFmpeg (une option <code>format</code> pour le filtre <code>scale_vt</code>, dans <code>changes.diff</code> et <code>scripts/patches/</code>, appliquée avant la compilation), la ligne de configuration exacte de chaque architecture, les versions des outils, le script qui en a produit les frameworks sur macOS avec Xcode, et les textes des licences. Son <code>SOURCES.md</code> explique comment recompiler les bibliothèques et les remplacer dans l’app.</p>
+  SHA-256 <code style="word-break:break-all">c73ab7251d843b2b53e7c5edd2c1a0960c15da69e81762180616db3b2e5eb1de</code></p>
+  <p>Il contient les archives officielles à l’octet près (FFmpeg, zimg, OpenH264, dav1d, et l’adaptation <code>fftools</code> de FFmpegKitNext), les modifications de Collaj à FFmpeg (cinq correctifs, dans <code>changes.diff</code> et <code>scripts/patches/</code>, appliqués avant la compilation : une option <code>format</code> pour le filtre <code>scale_vt</code> ; le mélange du filtre <code>overlay</code> écrit en NEON pour ARM, pour les images en 8 et en 10 bits et sur une image qui a de l’alpha, avec la correction d’une course entre les fils de ce filtre ; et une table de couleurs directe dans le filtre <code>paletteuse</code>), la ligne de configuration exacte de chaque architecture, les versions des outils, le script qui en a produit les frameworks sur macOS avec Xcode, et les textes des licences. Son <code>SOURCES.md</code> explique comment recompiler les bibliothèques et les remplacer dans l’app.</p>
 </div>
 
 <h3>Versions précédentes</h3>
